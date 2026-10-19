@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudyShare – Chia sẻ tài liệu học tập</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#/" class="logo"><span class="logo-mark">S</span><span>Study<b>Share</b></span></a>
+
+      <div class="global-search">
+        <input id="globalSearch" type="search" autocomplete="off" placeholder="Tìm tài liệu, môn học, giảng viên…  (nhấn /)">
+        <div id="searchDrop" class="search-drop" hidden></div>
+      </div>
+
+      <div class="top-actions">
+        <button id="themeBtn" class="icon-btn" title="Đổi giao diện sáng/tối">🌙</button>
+        <a href="#/upload" class="btn primary">＋ Tải lên</a>
+      </div>
+    </div>
+    <nav class="mainnav" id="mainnav">
+      <a href="#/" data-nav="home">Trang chủ</a>
+      <a href="#/docs" data-nav="docs">Tài liệu</a>
+      <a href="#/subjects" data-nav="subjects">Môn học</a>
+      <a href="#/teachers" data-nav="teachers">Giảng viên</a>
+      <a href="#/requests" data-nav="requests">Yêu cầu tài liệu</a>
+      <a href="#/leaderboard" data-nav="leaderboard">Bảng xếp hạng</a>
+      <a href="#/saved" data-nav="saved">Đã lưu</a>
+    </nav>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>StudyShare · Bản prototype demo – dữ liệu giả lập, lưu cục bộ trên trình duyệt.</span>
+      <button class="btn ghost sm" id="resetBtn">Xóa dữ liệu demo</button>
+    </div>
+  </footer>
+
+  <!-- Trình đọc xem trước -->
+  <div id="reader" class="reader" hidden></div>
+  <!-- Modal chung -->
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
